@@ -1,26 +1,28 @@
-//Relogio
-const horas = document.querySelector("#hora .valor")
-const minutos = document.querySelector("#minuto .valor")
-const segundos = document.querySelector("#segundo .valor")
+// Botoes menu
+const paginaHome = document.querySelector('#pagina-home');
+const paginaSobreMim = document.querySelector('#pagina-sobre-mim');
+const paginaHabilidades = document.querySelector('#pagina-habilidades');
+const paginaProjetos = document.querySelector('#pagina-projetos');
 
+//Divs
+const divHome = document.querySelector('#home');
+const divSobreMim = document.querySelector('#sobre-mim');
+const divHabilidades = document.querySelector('#habilidades');
+const divProjetos = document.querySelector('#projetos');
 
-const relogio = setInterval(function time(){
+paginaHome.addEventListener("click", function(){
+    divHome.scrollIntoView({ behavior: 'smooth' });
+})
 
-    let dataHoje = new Date();
+paginaSobreMim.addEventListener("click", function(){
+  divSobreMim.scrollIntoView({ behavior: 'smooth' });
+})
 
-    let horaHoje = dataHoje.getHours();
-    let minutoHoje = dataHoje.getMinutes();
-    let segundoHoje = dataHoje.getSeconds();
+paginaHabilidades.addEventListener("click", function(){
+  divHabilidades.scrollIntoView({ behavior: 'smooth' });
+})
 
-    if(horaHoje < 10) horaHoje = '0' + horaHoje;
-    if(minutoHoje < 10) minutoHoje = '0' + minutoHoje;
-    if(segundoHoje < 10) segundoHoje = '0' + segundoHoje;
-
-
-    horas.textContent = horaHoje;
-    minutos.textContent = minutoHoje;
-    segundos.textContent = segundoHoje;
-    
-
-});
+paginaProjetos.addEventListener("click", function(){
+  divProjetos.scrollIntoView({ behavior: 'smooth' });
+})
 
