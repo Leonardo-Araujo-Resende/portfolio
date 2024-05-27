@@ -1,101 +1,205 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Arial;
+    font-family: Fredoka;
     box-sizing: border-box;
 }
 
 :root{
-    --cor1: #112139;
-    --cor2: #5F6566;
-    --grau: 45deg;
+    --dark: #001E33;
+    --light1: #76FEAB;
+    --light2: #58FA94;
+    --light3: #20DD62;
+    --light4: #02BC3E;
 } 
 
 body{
-    height: 100vh;
-    background: linear-gradient(var(--grau), var(--cor1),  var(--cor2));
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    background: var(--dark);
 }
 
-#relogio{
-    display: flex; 
-    justify-content: space-around;
-    font-weight: bold;
-    box-shadow: 0px 4px 15px rgb(0, 0, 0);
-    width: 540px;
-    padding: 20px 20px;
-    border-radius: 10px;
+header{
+    background-color: var(--light4);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
-#relogio div {
-    border-radius: 10px;
-    width: 150px;
-    height: 168px;
+#cabecalho{
+    width: 50%;
     display: flex;
-    flex-direction: column;
-    text-align: center; 
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.806);
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.valor {    
-    color: white;
-    font-size: 60px;
+#home{
+    border: 3px solid rgb(51, 129, 80);
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
 }
 
-.tipo {
-    color: lightgray;
-    font-size: 12px;
-    padding-top: 10px;
-    
+#container {
+    margin: 80px 10px 10px 10px;
 }
 
-.modes{
+#apresentacao{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: absolute; 
-    top: 10px;
-    right: 10px;
-    gap: 10px;
 }
 
-.modes div{
+.quem-sou{
+    color: var(--light2);
+    font-weight: 600;
+    margin-bottom: 25px;
+    font-size: 50px;
+}
+
+.texto-apresentacao{
+    color: var(--light4);
+    font-size: 20px;
+}
+
+
+#img-apresentacao{
+
+    height: 100%;
+    width: 100%;
+}
+
+#img-apresentacao img{
+    size: cover;
+    position: center;
+    height: 100%;
+    width: 100%;
+}
+
+div{
+    border: 1px solid white;
+}
+
+#sobre-mim{
+    padding: 100px;
+    margin: 100px 0;
+}
+
+#sobre-mim h1{
+    color: var(--light4);
+    margin-bottom: 20px;
+}
+
+#sobre-mim p{
+    color: var(--light1);
+}
+
+/* ----------- */
+
+#habilidades{
+    padding: 100px;
+    margin: 100px 0;
+}
+
+#habilidades h1{
+    color: var(--light4);
+    margin-bottom: 20px;
+}
+
+#tecnologias{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.tecnologia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    border: 2px solid var(--light1);
+    border-radius: 10px;
+}
+
+#habilidades img{
+    width: 100px;
+    height: 100px;
+}
+
+#habilidades p{
+    margin-top: 10px;
+    text-align: center;
+    color: var(--light1);
+    font-weight: bold;
+}
+
+/* ----------- */
+
+#projetos{
+
+}
+
+#projetos h1{
+
+}
+
+.projeto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
+    margin: 10px 0;
+}
+
+.informacoes-projeto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.titulo-projeto{
+    color: var(--light4);
+    margin-bottom: 15px;
+}
+
+.descricao-projeto{
+    color: var(--light3);
+    margin-bottom: 10px;
+}
+
+.tecnologias-projeto{
+    display: flex;
+    flex-direction: row;
+}
+
+.tecnologia-projeto{
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.tecnologia-projeto img{
     width: 50px;
     height: 50px;
-    border-radius: 100%;
-    cursor: pointer;
 }
 
-#mode1{
-    background-color: #112139;
-    border: 4px solid #5F6566;
+.tecnologia-projeto p{
+    
 }
 
-#mode2{
-    background-color: blue;
-    border: 4px solid rgb(167, 167, 220);
-}
-
-#mode3{
-    background-color: yellow;
-    border: 4px solid rgb(241, 241, 194);
-}
-
-#mode4{
-    background-color: #0652F1;
-    border: 4px solid #00BFF3;
-}
-
-#mode5{
-    background-color: #FF124D;
-    border: 4px solid #6A1339;
-}
-
-#inverter{
-    background-color: rgba(0, 0, 0, 0.547);
-    border: 4px solid rgba(0, 0, 0, 0.526);
+.imagem-projeto{
+    width: 500px;
+    height: 400px;
 }
