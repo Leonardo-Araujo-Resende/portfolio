@@ -26,3 +26,18 @@ paginaProjetos.addEventListener("click", function(){
   divProjetos.scrollIntoView({ behavior: 'smooth' });
 })
 
+
+
+const titulo = document.querySelector('#quem-sou');
+
+var isDigitando = true;
+setInterval(() => {
+  if(isDigitando){
+    titulo.textContent = "Olá! Sou Leonardo" + "|";
+    isDigitando = false;
+  }else{
+    titulo.textContent = "Olá! Sou Leonardo";
+    isDigitando = true;
+  }
+
+}, 600); 

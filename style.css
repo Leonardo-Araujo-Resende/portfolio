@@ -6,11 +6,12 @@
 }
 
 :root{
-    --dark: #001E33;
+    --dark: #1f1f1f;
     --light1: #76FEAB;
     --light2: #58FA94;
     --light3: #20DD62;
     --light4: #02BC3E;
+    --light5: #00902e;
 } 
 
 
@@ -47,6 +48,7 @@ header{
 .paginas:hover{
     cursor: pointer;
     opacity: 45%;
+    font-weight: 500;
 }
 
 #contato{
@@ -84,13 +86,18 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-right: 10px;
 }
 
-.quem-sou{
+.quem-sou, #quem-sou{
     color: var(--light2);
     font-weight: 600;
     margin-bottom: 25px;
     font-size: 50px;
+}
+
+#quem-sou{
+    margin-bottom: 0;
 }
 
 .texto-apresentacao{
@@ -198,16 +205,17 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
+    padding: 0 20px;
+    height: 400px;
 }
 
 .titulo-projeto{
-    color: var(--light2);
+    color: var(--light4);
     margin-bottom: 15px;
 }
 
 .descricao-projeto{
-    color: var(--light3);
+    color: var(--light2);
     margin-bottom: 10px;
 }
 
@@ -217,15 +225,15 @@ header{
 }
 
 .redes-sociais i{
-    opacity: 90%;
     font-size: 30px;
-    color: white;
+    color: var(--light3);
     margin-right: 10px;
     cursor: pointer;
 }
 
 .redes-sociais i:hover{
-    opacity: 100%;
+    opacity: 50%;
+    transition: 0.4s;
 }
 
 .tecnologias-projeto{
@@ -239,7 +247,7 @@ header{
     flex-direction: column;
     align-items: center;
     padding: 5px;
-    border: 3px solid black;
+    border: 3px solid var(--light5);
     border-radius: 10px;
     width: 90px;
     height: 80px;
@@ -251,10 +259,11 @@ header{
 }
 
 .tecnologia-projeto p{
-    
+    color: var(--light3);
 }
 
 .imagem-projeto{
     width: 500px;
     height: 400px;
 }
+
