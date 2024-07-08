@@ -5,7 +5,8 @@ const paginaHabilidades = document.querySelector('#pagina-habilidades');
 const paginaProjetos = document.querySelector('#pagina-projetos');
 
 //Botoes projeto
-const botaoFacelita = document.querySelector("#botao-facelita");
+const botaoAbreFacelita = document.querySelector("#botao-facelita");
+const botaoFechaFacelita = document.querySelector("#x");
 
 //Divs
 const divHome = document.querySelector('#home');
@@ -68,6 +69,10 @@ function desativarFaceLita(){
   popupFacelita.classList.add("escondido");
 }
 
-botaoFacelita.addEventListener("click",function(){
+botaoAbreFacelita.addEventListener("click",function(){
   ativarFaceLita();
+})
+
+botaoFechaFacelita.addEventListener("click",function(){
+  desativarFaceLita();
 })
